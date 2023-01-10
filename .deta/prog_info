@@ -1,0 +1,1 @@
+{"id":"0f58fc8b-647b-452e-a3d5-38f9c41fd4bb","space":14603,"runtime":"python3.9","name":"BTCUSDT-IDEAS","path":"iaq1wg","project":"c05ucszo","account":"144798365827","region":"ap-southeast-1","deps":["fastapi","beautifulsoup4","lxml","requests","jinja2","urllib3","pandas"],"envs":null,"public":false,"log_level":"off","cron":""}

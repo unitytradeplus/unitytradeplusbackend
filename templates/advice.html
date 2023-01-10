@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTCUSDT|ADVICE</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey w3-content w3-section">
+
+    <div>
+
+        <h1 class="w3-center w3-opacity">
+            <b>ADVICE</b>
+            <br>
+            <a href="/" class="w3-button w3-green w3-small">Home</a>
+        </h1>
+
+        {% for ideas3 in ideas %}
+        <div class="w3-row-padding">
+            {% for idea in ideas3 %}
+            <div class="w3-third w3-container w3-margin-bottom w3-justify">
+                <img src="{{idea['IMAGE']}}" alt="BTCUSDT" style="width:100%" class="w3-hover-opacity"
+                    onclick="OPEN_MODEL(src)">
+                    <div class="w3-container w3-white">
+                        <p><b>{{idea['TITLE']}}</b></p>
+                        <p>
+                            {{idea['DETAIL']}}
+                        </p>
+                        <p class="w3-opacity">
+                            <b>
+                                <a href="https://www.tradingview.com/u/{{idea['AUTHOR']}}">by {{idea['AUTHOR']}}</a>
+                            </b>
+                        </p>
+                    </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                    <div class="w3-center">
+                        <span onclick="document.getElementById('id01').style.display='none'"
+                            class="w3-button w3-xlarge w3-hover-red w3-text-red w3-display-topright"
+                            title="Close Modal"><b>X</b></span>
+                        <img alt="CHART" id="chart" style="width:100%" class="w3-margin-top">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        const OPEN_MODEL = (SRC) => {
+            document.getElementById('chart').src = SRC;
+            document.getElementById('id01').style.display = 'block'
+        }
+    </script>
+</body>
+
+</html>

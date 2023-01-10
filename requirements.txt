@@ -1,0 +1,7 @@
+fastapi
+beautifulsoup4
+lxml
+requests
+jinja2
+urllib3
+pandas
