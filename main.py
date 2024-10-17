@@ -13,7 +13,7 @@ from pandas import json_normalize
 from urllib.request import urlopen
 
 
-app = FastAPI()
+app = FastAPI(title="utp")
 templates = Jinja2Templates(directory="templates")
 app.add_middleware(
     CORSMiddleware,
